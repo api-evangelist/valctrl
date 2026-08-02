@@ -1,5 +1,5 @@
-# Valctrl
+# ValCtrl
 
-Valctrl is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+ValCtrl is a Y Combinator-backed (Spring 2026 batch) startup building an intelligent prediction market platform — users input any public, resolvable belief about the future, and the platform structures, prices, and enables trading on that claim. Founded by Gaurav Paliwal and Sarth Garg in New York City. The company is pre-launch: [valctrl.com](https://valctrl.com) is a stealth landing page with no public API, documentation, or developer surface as of July 2026.
 
 Backed by: y-combinator

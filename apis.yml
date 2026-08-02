@@ -1,7 +1,12 @@
 aid: valctrl
-name: Valctrl
-description: Valctrl is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: ValCtrl
+description: ValCtrl is a Y Combinator-backed (Spring 2026 batch) startup building an
+  intelligent prediction market platform, where users can input any public, resolvable
+  belief about the future and the platform structures, prices, and enables trading on
+  that claim. Its world model maps typed beliefs to relevant market signals, evaluates
+  basis risk, and provides model-priced liquidity. Founded by Gaurav Paliwal and Sarth
+  Garg in New York City, the company is pre-launch with a stealth landing page and no
+  public API, documentation, or developer surface as of July 2026.
 url: https://raw.githubusercontent.com/api-evangelist/valctrl/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +14,49 @@ x-backed-by:
 - y-combinator
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-yc-profile: https://www.ycombinator.com/companies/valctrl
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://valctrl.com/ValCtrl.png
 tags:
 - Company
+- Prediction Markets
+- Fintech
+- Trading
+- Market Infrastructure
+- Forecasting
 apis: []
+common:
+- type: DomainSecurity
+  url: security/valctrl-domain-security.yml
+- name: Website
+  type: Website
+  url: https://valctrl.com
+- name: Content Signals (robots.txt)
+  type: ContentSignal
+  url: well-known/valctrl-robots.txt
+- name: LLMs.txt
+  type: LLMsTxt
+  url: llms/valctrl-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1

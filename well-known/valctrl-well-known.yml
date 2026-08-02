@@ -1,0 +1,55 @@
+generated: '2026-07-21'
+method: searched
+source: https://valctrl.com
+host: https://valctrl.com
+note: valctrl.com is a single-page stealth landing site (React SPA behind Cloudflare)
+  that returns HTTP 200 with the SPA HTML shell for every path, so a 200 status alone
+  does not indicate a real document. Content-type was checked for each probe; only
+  robots.txt and sitemap.xml are genuine documents. No /.well-known/ discovery surface
+  exists. robots.txt carries Cloudflare-managed Content Signals (search=yes,
+  ai-train=no, use=reference) plus AI-crawler disallows, saved verbatim as
+  valctrl-robots.txt.
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  content_type: text/html
+  document_present: false
+  note: SPA fallback page, not a security.txt
+- path: /.well-known/openid-configuration
+  status: 200
+  content_type: text/html
+  document_present: false
+  note: SPA fallback page, not an OIDC discovery document
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: text/html
+  document_present: false
+  note: SPA fallback page, not an RFC 8414 document
+- path: /.well-known/api-catalog
+  status: 200
+  content_type: text/html
+  document_present: false
+  note: SPA fallback page, not an API catalog
+- path: /.well-known/ai-plugin.json
+  status: 200
+  content_type: text/html
+  document_present: false
+  note: SPA fallback page, not an ai-plugin manifest
+- path: /llms.txt
+  status: 200
+  content_type: text/html
+  document_present: false
+  note: SPA fallback page, not an llms.txt
+- path: /robots.txt
+  status: 200
+  content_type: text/plain
+  document_present: true
+  file: valctrl-robots.txt
+  note: Real document with Cloudflare Content Signals (search=yes, ai-train=no,
+    use=reference) and AI-crawler disallow rules
+- path: /sitemap.xml
+  status: 200
+  content_type: text/xml
+  document_present: true
+  file: valctrl-sitemap.xml
+  note: Real document; lists a single URL (the homepage), lastmod 2026-07-02
